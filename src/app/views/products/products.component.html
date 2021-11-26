@@ -1,0 +1,33 @@
+<table class="table-bordered table">
+  <tr>
+    <th>
+      Category
+    </th>
+    <th>
+      Code
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  <tr *ngIf="!this.products.length">
+    <td class="text-center" colspan="4">No se tiene ningun producto</td>
+  </tr>
+  <tr *ngFor="let product of this.products">
+    <td>
+      {{product.category}}
+    </td>
+    <td>
+      {{product.code}}
+    </td>
+    <td>
+      {{product.name}}
+    </td>
+    <td>
+      {{product.description}}
+    </td>
+  </tr>
+</table>
